@@ -1,5 +1,5 @@
 import React from 'react';
-import './app.css';
+import './neubrutalism.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
                 <Routes>
                     <Route path='*' element={<NotFound />} />
                 </Routes>
-                <footer>
+                <footer className="text-body">
                     <small>Authored by Howard Crawford</small>
                     <small><a href="#" target="_blank"> Github</a></small>
                 </footer>
@@ -19,5 +19,11 @@ export default function App() {
 }
 
 function NotFound() {
-    return <main className="flex-centered">404: Well that's awkward... We couldn't find what you're looking for!</main>;
+    return (
+        <main>
+            <h1 className="text-display">404</h1>
+            <h2 className="text-heading">Well that's awkward...</h2>
+            <p className="text-body">We couldn't find what you're looking for!</p>
+        </main>
+    );
 }
