@@ -1,5 +1,6 @@
 import React from 'react';
 import './neubrutalism.css';
+import './app.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export default function App() {
@@ -21,7 +22,7 @@ export default function App() {
 function NotFound() {
     return (
         <main>
-            <h1 className="text-display">404</h1>
+            <h1 className="text-display text-3xl">404</h1>
             <h2 className="text-heading">Well that's awkward...</h2>
             <p className="text-body">We couldn't find what you're looking for!</p>
         </main>

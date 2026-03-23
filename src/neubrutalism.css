@@ -72,22 +72,22 @@
 }
 
 .text-body {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 450;
-  font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
 }
 
 .text-heading {
-  font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .text-display {
     font-family: "Syne", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
