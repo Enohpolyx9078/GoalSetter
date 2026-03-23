@@ -6,13 +6,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 export default function App() {
     return (
         <BrowserRouter>
-            <div className="body">
+            <div className="p-4">
                 <Routes>
                     <Route path='*' element={<NotFound />} />
                 </Routes>
-                <footer className="text-body">
-                    <small>Authored by Howard Crawford</small>
-                    <small><a href="#" target="_blank"> Github</a></small>
+                <footer className="text-body nb-card">
+                    <p>Authored by Howard Crawford
+                        <a href="https://github.com/Enohpolyx9078/GoalSetter" className="nb-btn ms-2" target="_blank"> Github</a>
+                    </p>
                 </footer>
             </div>
         </BrowserRouter>
@@ -22,9 +23,8 @@ export default function App() {
 function NotFound() {
     return (
         <main>
-            <h1 className="text-display text-3xl">404</h1>
-            <h2 className="text-heading">Well that's awkward...</h2>
-            <p className="text-body">We couldn't find what you're looking for!</p>
+            <h1 className="text-display text-3xl nb-card">404: Well that's awkward...</h1>
+            <p className="text-body mt-4 mb-4">We couldn't find what you're looking for!</p>
         </main>
     );
 }

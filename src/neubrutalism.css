@@ -24,7 +24,7 @@
     font-weight: 700;
     padding: 12px 24px;
     cursor: pointer;
-    transition: all 0.1s ease;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .nb-btn:hover {
@@ -49,11 +49,6 @@
     box-shadow: 5px 5px 0 0 #000;
     padding: 1.5rem;
     transition: transform 0.15s, box-shadow 0.15s;
-}
-
-.nb-card:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 7px 7px 0 0 #000;
 }
 
 .nb-input {
