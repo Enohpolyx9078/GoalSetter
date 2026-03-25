@@ -17,6 +17,7 @@
 }
 
 .nb-btn {
+    display: inline-block; 
     border: 3px solid #000;
     border-radius: 0;
     background: var(--orange);
@@ -25,6 +26,9 @@
     font-weight: 700;
     padding: 12px 24px;
     cursor: pointer;
+    text-decoration: none; /* Helpful if using an <a> tag */
+    
+    /* Standardized transition for smooth movement */
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
