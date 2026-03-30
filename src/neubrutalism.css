@@ -36,6 +36,10 @@ body {
     background-color: var(--orange) !important;
 }
 
+.nb-bg {
+    background-color: var(--bg) !important;
+}
+
 .nb-btn {
     display: inline-block; 
     border: 3px solid #000;

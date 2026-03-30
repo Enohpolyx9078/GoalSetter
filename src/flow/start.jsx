@@ -16,8 +16,8 @@ export function Start({ goalName }) {
             <section className="mt-4">
                 <div className="nb-card nb-yellow">
                     <h2 className="text-heading text-2xl">Name your goal:</h2>
-                    <input ref={ name } className="nb-input" name="goalName" placeholder="Type your future..." />
-                    <button onClick={toNext} className="nb-btn mt-4">Keep Going</button>
+                    <input ref={ name } className="nb-input mr-4" name="goalName" placeholder="Type your future..." />
+                    <button onClick={toNext} className="nb-btn mt-4">Let's Go!</button>
                 </div>
             </section>
         </main>
