@@ -6,7 +6,7 @@ import { Start } from './flow/start.jsx'
 import { Timeline } from './flow/timeline.jsx';
 
 export default function App() {
-    const goalName = React.useRef("");
+    const goalName = React.useRef();
     const timeline = React.useRef();
 
     return (
