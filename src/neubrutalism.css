@@ -16,6 +16,26 @@
     --orange: #ffa552;
 }
 
+body {
+    background-color: var(--bg);
+}
+
+.nb-pink {
+    background-color: var(--pink) !important;
+}
+
+.nb-blue {
+    background-color: var(--blue) !important;
+}
+
+.nb-yellow {
+    background-color: var(--yellow) !important;
+}
+
+.nb-orange {
+    background-color: var(--orange) !important;
+}
+
 .nb-btn {
     display: inline-block; 
     border: 3px solid #000;
