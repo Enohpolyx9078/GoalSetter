@@ -3,13 +3,18 @@ import './neubrutalism.css';
 import './app.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Start } from './flow/start.jsx'
+import { Timeline } from './flow/timeline.jsx';
 
 export default function App() {
+    const goalName = React.useRef("");
+    const timeline = React.useRef();
+
     return (
         <BrowserRouter>
             <div className="p-4">
                 <Routes>
-                    <Route path='/' element={<Start />} exact />
+                    <Route path='/' element={<Start goalName={ goalName }/>} exact />
+                    <Route path='/timeline' element={<Timeline goalName={ goalName } timeline={ timeline }/>} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
                 <footer className="absolute inset-x-4 bottom-4 text-body nb-card">
