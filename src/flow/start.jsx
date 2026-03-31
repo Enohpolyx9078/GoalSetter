@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 export function Start({ goalName }) {
     const nav = useNavigate()
-    const name = React.useRef();
 
     async function toNext() {
         nav('/timeline');

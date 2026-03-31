@@ -4,6 +4,7 @@ import './app.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Start } from './flow/start.jsx'
 import { Timeline } from './flow/timeline.jsx';
+import { Breakdown } from './flow/breakdown.jsx';
 
 export default function App() {
     const goalName = React.useRef();
@@ -15,6 +16,7 @@ export default function App() {
                 <Routes>
                     <Route path='/' element={<Start goalName={ goalName }/>} exact />
                     <Route path='/timeline' element={<Timeline goalName={ goalName } timeline={ timeline }/>} />
+                    <Route path='/breakdown' element={<Breakdown goalName={ goalName } timeline={ timeline }/>} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
                 <footer className="absolute inset-x-4 bottom-4 text-body nb-card">
