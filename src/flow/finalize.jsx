@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export function Breakdown({ goalName, timeline, setBreakdown }) {
+export function Finalize({ goalName, timeline, breakdown }) {
     const breakdown = React.useRef();
     const nav = useNavigate();
 

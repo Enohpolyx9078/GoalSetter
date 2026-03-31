@@ -9,14 +9,16 @@ import { Breakdown } from './flow/breakdown.jsx';
 export default function App() {
     const [goalName, setGoalName] = React.useState("");
     const [timeline, setTimeline] = React.useState("");
+    const [breakdown, setBreakdown] = React.useState("");
 
     return (
         <BrowserRouter>
             <div className="p-4">
                 <Routes>
-                    <Route path='/' element={<Start setGoalName={ setGoalName }/>} exact />
-                    <Route path='/timeline' element={<Timeline goalName={ goalName } setTimeline={ setTimeline }/>} />
-                    <Route path='/breakdown' element={<Breakdown goalName={ goalName } timeline={ timeline }/>} />
+                    <Route path='/' element={<Start setGoalName={setGoalName} />} exact />
+                    <Route path='/timeline' element={<Timeline goalName={goalName} setTimeline={setTimeline} />} />
+                    <Route path='/breakdown' element={<Breakdown goalName={goalName} timeline={timeline} setBreakdown={setBreakdown} />} />
+                    <Route path='/finalize' element={<Finalize goalName={goalName} timeline={timeline} breakdown={breakdown} />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
                 <footer className="absolute inset-x-4 bottom-4 text-body nb-card">
