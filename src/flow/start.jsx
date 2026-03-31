@@ -1,10 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export function Start({ goalName }) {
-    const nav = useNavigate()
+export function Start({ setGoalName }) {
+    const name = React.useRef();
+    const nav = useNavigate();
 
     async function toNext() {
+        setGoalName(name.current.value);
         nav('/timeline');
     }
 
@@ -14,7 +16,7 @@ export function Start({ goalName }) {
             <section className="mt-4">
                 <div className="nb-card nb-yellow">
                     <h2 className="text-heading text-2xl">Name your goal:</h2>
-                    <input ref={ goalName } className="nb-input mr-4" name="goalName" placeholder="Type your future..." />
+                    <input ref={ name } className="nb-input mr-4" name="goalName" placeholder="Type your future..." />
                     <button onClick={toNext} className="nb-btn mt-4">Let's Go!</button>
                 </div>
             </section>

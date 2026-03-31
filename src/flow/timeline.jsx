@@ -1,16 +1,18 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export function Timeline({ goalName, timeline }) {
+export function Timeline({ goalName, setTimeline }) {
+    const timeline = React.useRef();
     const nav = useNavigate();
 
     async function toNext() {
+        setTimeline(timeline.current.value);
         nav('/breakdown');
     }
 
     return (
         <main>
-            <h1 className="text-display text-3xl nb-card nb-blue">{ goalName.current.value }</h1>
+            <h1 className="text-display text-3xl nb-card nb-blue">{ goalName }</h1>
             <section className="mt-4">
                 <div className="nb-card nb-orange">
                     <h2 className="text-heading text-2xl">When will this be done?</h2>

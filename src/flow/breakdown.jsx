@@ -10,7 +10,7 @@ export function Breakdown({ goalName, timeline }) {
 
     return (
         <main>
-            <h1 className="text-display text-3xl nb-card nb-blue">{ goalName.current.value }</h1>
+            <h1 className="text-display text-3xl nb-card nb-blue">{ goalName }</h1>
             <section className="mt-4">
                 <div className="nb-card nb-orange">
                     <h2 className="text-heading text-2xl">-</h2>

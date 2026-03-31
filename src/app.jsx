@@ -7,15 +7,15 @@ import { Timeline } from './flow/timeline.jsx';
 import { Breakdown } from './flow/breakdown.jsx';
 
 export default function App() {
-    const goalName = React.useRef();
-    const timeline = React.useRef();
+    const [goalName, setGoalName] = React.useState("");
+    const [timeline, setTimeline] = React.useState("");
 
     return (
         <BrowserRouter>
             <div className="p-4">
                 <Routes>
-                    <Route path='/' element={<Start goalName={ goalName }/>} exact />
-                    <Route path='/timeline' element={<Timeline goalName={ goalName } timeline={ timeline }/>} />
+                    <Route path='/' element={<Start setGoalName={ setGoalName }/>} exact />
+                    <Route path='/timeline' element={<Timeline goalName={ goalName } setTimeline={ setTimeline }/>} />
                     <Route path='/breakdown' element={<Breakdown goalName={ goalName } timeline={ timeline }/>} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
