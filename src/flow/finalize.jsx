@@ -2,12 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export function Finalize({ goalName, timeline, breakdown }) {
-    const breakdown = React.useRef();
     const nav = useNavigate();
 
     async function toNext() {
-        setBreakdown(breakdown.current.value);
-        nav('/finalize');
+        nav('/ending');
     }
 
     return (
@@ -16,11 +14,14 @@ export function Finalize({ goalName, timeline, breakdown }) {
                 <h1 className="text-display text-3xl">{goalName}</h1>
                 <h2 className="text-heading text-2xl">To be done by { timeline }</h2>
             </div>
+            <div className="nb-card nb-orange mt-4">
+                <h2 className="text-heading text-2xl">The Plan</h2>
+                <p>{ breakdown }</p>
+            </div>
             <section className="mt-4">
                 <div className="nb-card nb-blue">
-                    <h2 className="text-heading text-2xl">Break it down</h2>
-                    <textarea ref={ breakdown } className="nb-input" placeholder="Make your plan..."></textarea>
-                    <button onClick={toNext} className="nb-btn nb-orange mt-4">Finish Up</button>
+                    <h2 className="text-heading text-2xl">Wrapping Up...</h2>
+                    <button onClick={toNext} className="nb-btn nb-orange mt-4">View Your Goal</button>
                 </div>
             </section>
         </main>

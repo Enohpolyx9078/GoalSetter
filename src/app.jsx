@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Start } from './flow/start.jsx'
 import { Timeline } from './flow/timeline.jsx';
 import { Breakdown } from './flow/breakdown.jsx';
+import { Finalize } from './flow/finalize.jsx';
 
 export default function App() {
     const [goalName, setGoalName] = React.useState("");
