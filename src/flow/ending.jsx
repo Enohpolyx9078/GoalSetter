@@ -10,7 +10,7 @@ export function Ending({ goalName, timeline, breakdown }) {
 
     return (
         <section>
-            <p className="text-center text-body m-1">Screenshot this page!</p>
+            <p className="text-center text-body m-1 text-gray-400">Screenshot this page!</p>
             <div className="flex justify-center nb-card nb-blue">
                 <div className="nb-card">
                     <img className="h-[100px]" src="christ.jpeg" />
