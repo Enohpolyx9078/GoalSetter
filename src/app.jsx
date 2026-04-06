@@ -6,6 +6,7 @@ import { Start } from './flow/start.jsx'
 import { Timeline } from './flow/timeline.jsx';
 import { Breakdown } from './flow/breakdown.jsx';
 import { Finalize } from './flow/finalize.jsx';
+import { Ending } from './flow/ending.jsx';
 
 export default function App() {
     const [goalName, setGoalName] = React.useState("");
@@ -21,6 +22,7 @@ export default function App() {
                         <Route path='/timeline' element={<Timeline goalName={goalName} setTimeline={setTimeline} />} />
                         <Route path='/breakdown' element={<Breakdown goalName={goalName} timeline={timeline} setBreakdown={setBreakdown} />} />
                         <Route path='/finalize' element={<Finalize goalName={goalName} timeline={timeline} breakdown={breakdown} />} />
+                        <Route path='/ending' element={<Ending goalName={goalName} timeline={timeline} breakdown={breakdown} />} />
                         <Route path='*' element={<NotFound />} />
                     </Routes>
                 </main>
