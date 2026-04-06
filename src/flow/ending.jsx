@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 export function Ending({ goalName, timeline, breakdown }) {
     const nav = useNavigate();
 
-    async function toNext() {
-        nav('/ending');
+    async function toStart() {
+        nav('/');
     }
 
     return (
@@ -19,6 +19,9 @@ export function Ending({ goalName, timeline, breakdown }) {
             </div>
             <div className="nb-card nb-yellow mt-4">
                 <p className="text-heading text-2xl">{breakdown}</p>
+            </div>
+            <div className="text-center">
+                <button onClick={toStart} className="nb-btn nb-pink mt-4">Start Over</button>
             </div>
         </section>
     );
