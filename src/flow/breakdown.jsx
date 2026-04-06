@@ -11,7 +11,7 @@ export function Breakdown({ goalName, timeline, setBreakdown }) {
     }
 
     return (
-        <main>
+        <section>
             <div className="nb-card nb-yellow">
                 <h1 className="text-display text-3xl">{goalName}</h1>
                 <h2 className="text-heading text-2xl">To be done by {timeline}</h2>
@@ -28,6 +28,6 @@ export function Breakdown({ goalName, timeline, setBreakdown }) {
                     <button onClick={toNext} className="nb-btn nb-orange mt-4">Finish Up</button>
                 </div>
             </section>
-        </main>
+        </section>
     );
 }

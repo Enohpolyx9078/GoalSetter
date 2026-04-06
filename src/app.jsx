@@ -14,15 +14,17 @@ export default function App() {
 
     return (
         <BrowserRouter>
-            <div className="p-4">
-                <Routes>
-                    <Route path='/' element={<Start setGoalName={setGoalName} />} exact />
-                    <Route path='/timeline' element={<Timeline goalName={goalName} setTimeline={setTimeline} />} />
-                    <Route path='/breakdown' element={<Breakdown goalName={goalName} timeline={timeline} setBreakdown={setBreakdown} />} />
-                    <Route path='/finalize' element={<Finalize goalName={goalName} timeline={timeline} breakdown={breakdown} />} />
-                    <Route path='*' element={<NotFound />} />
-                </Routes>
-                <footer className="absolute inset-x-4 bottom-4 text-body nb-card">
+            <div className="flex flex-col min-h-screen p-4">
+                <main className="flex-grow">
+                    <Routes>
+                        <Route path='/' element={<Start setGoalName={setGoalName} />} exact />
+                        <Route path='/timeline' element={<Timeline goalName={goalName} setTimeline={setTimeline} />} />
+                        <Route path='/breakdown' element={<Breakdown goalName={goalName} timeline={timeline} setBreakdown={setBreakdown} />} />
+                        <Route path='/finalize' element={<Finalize goalName={goalName} timeline={timeline} breakdown={breakdown} />} />
+                        <Route path='*' element={<NotFound />} />
+                    </Routes>
+                </main>
+                <footer className="mt-4 text-body nb-card h-min">
                     <p>Authored by Howard Crawford
                         <a href="https://github.com/Enohpolyx9078/GoalSetter" className="nb-btn ms-2" target="_blank"> Github</a>
                     </p>

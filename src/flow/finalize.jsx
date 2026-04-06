@@ -9,7 +9,7 @@ export function Finalize({ goalName, timeline, breakdown }) {
     }
 
     return (
-        <main>
+        <section>
             <div className="nb-card nb-yellow">
                 <h1 className="text-display text-3xl">{goalName}</h1>
                 <h2 className="text-heading text-2xl">To be done by { timeline }</h2>
@@ -21,9 +21,15 @@ export function Finalize({ goalName, timeline, breakdown }) {
             <section className="mt-4">
                 <div className="nb-card nb-blue">
                     <h2 className="text-heading text-2xl">Wrapping Up...</h2>
+                    <div className="nb-card">
+                        <img src="christ.jpeg"/>
+                    </div>
+                    <div className="text-body mt-4">
+
+                    </div>
                     <button onClick={toNext} className="nb-btn nb-orange mt-4">View Your Goal</button>
                 </div>
             </section>
-        </main>
+        </section>
     );
 }

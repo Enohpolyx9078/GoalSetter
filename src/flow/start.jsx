@@ -11,7 +11,7 @@ export function Start({ setGoalName }) {
     }
 
     return (
-        <main>
+        <section>
             <h1 className="text-display text-3xl nb-card nb-pink">Ready to get started?</h1>
             <section className="mt-4">
                 <div className="nb-card nb-yellow">
@@ -20,6 +20,6 @@ export function Start({ setGoalName }) {
                     <button onClick={toNext} className="nb-btn mt-4">Let's Go!</button>
                 </div>
             </section>
-        </main>
+        </section>
     );
 }

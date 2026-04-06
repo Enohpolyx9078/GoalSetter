@@ -56,7 +56,7 @@ export function Timeline({ goalName, setTimeline }) {
     }
 
     return (
-        <main>
+        <section>
             <h1 className="text-display text-3xl nb-card nb-blue">{ goalName }</h1>
             <section className="mt-4">
                 <div className="nb-card nb-orange">
@@ -67,6 +67,6 @@ export function Timeline({ goalName, setTimeline }) {
                     <button onClick={toNext} className="nb-btn nb-pink mt-4">Keep Going</button>
                 </div>
             </section>
-        </main>
+        </section>
     );
 }
