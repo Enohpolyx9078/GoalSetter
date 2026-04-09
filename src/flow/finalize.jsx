@@ -25,9 +25,9 @@ export function Finalize({ goalName, timeline, breakdown }) {
                         <img src="christ.jpeg"/>
                     </div>
                     <div className="text-body mt-4">
-                        <p>Remember, there's exactly one person that can truly get you to your goal.</p>
-                        <p>That's <strong>Jesus Christ</strong>!</p>
-                        <p>While you're making your plans, include Him in each step. That's what will get you to the end.</p>
+                        <p>A last reminder:</p>
+                        <p><strong>Jesus Christ</strong> is the only way to an eternal family and eternal joy.</p>
+                        <p>Let Him strenghen you on your jounery to joy!</p>
                     </div>
                     <button onClick={toNext} className="nb-btn nb-yellow mt-4">View Your Goal</button>
                 </div>

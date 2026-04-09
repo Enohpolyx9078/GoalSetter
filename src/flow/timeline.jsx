@@ -62,7 +62,7 @@ export function Timeline({ goalName, setTimeline }) {
                 <div className="nb-card nb-orange">
                     <h2 className="text-heading text-2xl">When will this be done?</h2>
                     <input ref={ timeline } className="nb-input mr-4" name="timeline" type="date" />
-                    <p className="text-body mt-4">Remember, goals are best when they're close. You'll be much more likely to acheive your goal if you have an upcoming date to achieve it.
+                    <p className="text-body mt-4">Remember, goals are best when they're close. You'll be much more likely to acheive your goal if you have an upcoming deadline to finish it.
                     </p>
                     <button onClick={toNext} className="nb-btn nb-pink mt-4">Keep Going</button>
                 </div>
