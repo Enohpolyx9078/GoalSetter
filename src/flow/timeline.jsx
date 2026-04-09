@@ -57,9 +57,9 @@ export function Timeline({ goalName, setTimeline }) {
 
     return (
         <section>
-            <h1 className="text-display text-3xl nb-card nb-blue">{ goalName }</h1>
+            <h1 className="text-display text-3xl nb-card nb-blue slide-in-on-load">{ goalName }</h1>
             <section className="mt-4">
-                <div className="nb-card nb-orange">
+                <div className="nb-card nb-orange slide-in-on-load">
                     <h2 className="text-heading text-2xl">When will this be done?</h2>
                     <input ref={ timeline } className="nb-input mr-4" name="timeline" type="date" />
                     <p className="text-body mt-4">Remember, goals are best when they're close. You'll be much more likely to acheive your goal if you have an upcoming deadline to finish it.

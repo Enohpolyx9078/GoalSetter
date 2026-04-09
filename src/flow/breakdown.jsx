@@ -12,12 +12,12 @@ export function Breakdown({ goalName, timeline, setBreakdown }) {
 
     return (
         <section>
-            <div className="nb-card nb-yellow">
+            <div className="nb-card nb-yellow slide-in-on-load">
                 <h1 className="text-display text-3xl">{goalName}</h1>
                 <h2 className="text-heading text-2xl">To be done by {timeline}</h2>
             </div>
             <section className="mt-4">
-                <div className="nb-card nb-blue">
+                <div className="nb-card nb-blue slide-in-on-load">
                     <h2 className="text-heading text-2xl">Break it down</h2>
                     <textarea ref={breakdown} className="nb-input" placeholder="Make your plan..."></textarea>
                     <div className="text-body mt-4">
