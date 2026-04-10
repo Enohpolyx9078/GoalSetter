@@ -52,14 +52,18 @@ export function Timeline({ goalName, setTimeline }) {
     async function toNext() {
         const dateString = await formatTimeline(timeline.current.value);
         setTimeline(dateString);
-        nav('/breakdown');
+        const cards = document.getElementsByClassName('interactive-card');
+        for (var card of cards) {
+            card.classList.add('slide-out-left');
+        }
+        setTimeout(() => { nav('/breakdown') }, 600);
     }
 
     return (
         <section>
-            <h1 className="text-display text-3xl nb-card nb-blue slide-in-on-load">{ goalName }</h1>
+            <h1 className="text-display text-3xl nb-card nb-blue slide-in-on-load interactive-card">{ goalName }</h1>
             <section className="mt-4">
-                <div className="nb-card nb-orange slide-in-on-load">
+                <div className="nb-card nb-orange slide-in-on-load interactive-card">
                     <h2 className="text-heading text-2xl">When will this be done?</h2>
                     <input ref={ timeline } className="nb-input mr-4" name="timeline" type="date" />
                     <p className="text-body mt-4">Remember, goals are best when they're close. You'll be much more likely to acheive your goal if you have an upcoming deadline to finish it.

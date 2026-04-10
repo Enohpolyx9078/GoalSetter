@@ -7,17 +7,21 @@ export function Breakdown({ goalName, timeline, setBreakdown }) {
 
     async function toNext() {
         setBreakdown(breakdown.current.value);
-        nav('/finalize');
+        const cards = document.getElementsByClassName('interactive-card');
+        for (var card of cards) {
+            card.classList.add('slide-out-left');
+        }
+        setTimeout(() => { nav('/finalize') }, 600);
     }
 
     return (
         <section>
-            <div className="nb-card nb-yellow slide-in-on-load">
+            <div className="nb-card nb-yellow slide-in-on-load interactive-card">
                 <h1 className="text-display text-3xl">{goalName}</h1>
                 <h2 className="text-heading text-2xl">To be done by {timeline}</h2>
             </div>
             <section className="mt-4">
-                <div className="nb-card nb-blue slide-in-on-load">
+                <div className="nb-card nb-blue slide-in-on-load interactive-card">
                     <h2 className="text-heading text-2xl">Break it down</h2>
                     <textarea ref={breakdown} className="nb-input" placeholder="Make your plan..."></textarea>
                     <div className="text-body mt-4">

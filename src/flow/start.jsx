@@ -6,12 +6,12 @@ export function Start({ setGoalName }) {
     const nav = useNavigate();
 
     async function toNext() {
+        setGoalName(name.current.value);
         const cards = document.getElementsByClassName('interactive-card');
         for (var card of cards) {
-            setGoalName(name.current.value);
             card.classList.add('slide-out-left');
         }
-        //setTimeout(() => { nav('/timeline') }, 600);
+        setTimeout(() => { nav('/timeline') }, 600);
     }
 
     return (

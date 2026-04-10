@@ -5,24 +5,28 @@ export function Ending({ goalName, timeline, breakdown }) {
     const nav = useNavigate();
 
     async function toStart() {
-        nav('/');
+        const cards = document.getElementsByClassName('interactive-card');
+        for (var card of cards) {
+            card.classList.add('slide-out-left');
+        }
+        setTimeout(() => { nav('/') }, 600);
     }
 
     return (
         <section>
             <p className="text-center text-body m-1 text-gray-400">Screenshot this page!</p>
-            <div className="flex justify-center nb-card nb-blue slide-in-on-load">
+            <div className="flex justify-center nb-card nb-blue slide-in-on-load interactive-card">
                 <div className="nb-card">
                     <img className="h-[100px]" src="christ.jpeg" />
                 </div>
             </div>
-            <div className="nb-card nb-orange mt-4 slide-in-on-load">
+            <div className="nb-card nb-orange mt-4 slide-in-on-load interactive-card">
                 <h1 className="text-display text-2xl">Imma get <b>{goalName}</b> done by <b>{timeline}</b></h1>
             </div>
-            <div className="nb-card nb-yellow mt-4 slide-in-on-load">
+            <div className="nb-card nb-yellow mt-4 slide-in-on-load interactive-card">
                 <p className="text-heading text-2xl">{breakdown}</p>
             </div>
-            <div className="text-center slide-in-on-load">
+            <div className="text-center slide-in-on-load interactive-card">
                 <button onClick={toStart} className="nb-btn nb-pink mt-4">Start Over</button>
             </div>
         </section>
