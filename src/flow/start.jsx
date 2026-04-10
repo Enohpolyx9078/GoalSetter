@@ -6,15 +6,19 @@ export function Start({ setGoalName }) {
     const nav = useNavigate();
 
     async function toNext() {
-        setGoalName(name.current.value);
-        nav('/timeline');
+        const cards = document.getElementsByClassName('interactive-card');
+        for (var card of cards) {
+            setGoalName(name.current.value);
+            card.classList.add('slide-out-left');
+        }
+        //setTimeout(() => { nav('/timeline') }, 600);
     }
 
     return (
         <section>
-            <h1 className="text-display text-3xl nb-card nb-pink slide-in-on-load">Jesus Christ is the Center!</h1>
+            <h1 className="text-display text-3xl nb-card nb-pink slide-in-on-load interactive-card">Jesus Christ is the Center!</h1>
             <section className="mt-4">
-                <div className="nb-card nb-blue slide-in-on-load">
+                <div className="nb-card nb-blue slide-in-on-load interactive-card">
                     <h2 className="text-heading text-2xl">Ready to get started?</h2>
                     <div className="nb-card nb-bg">
                         <img src="christ.jpeg" />
@@ -25,7 +29,7 @@ export function Start({ setGoalName }) {
                         <p>While you're making your plans, include Him in each step. That's what will get you to the end.</p>
                     </div>
                 </div>
-                <div className="nb-card nb-yellow mt-4 slide-in-on-load">
+                <div className="nb-card nb-yellow mt-4 slide-in-on-load interactive-card">
                     <h2 className="text-heading text-2xl">Name your goal:</h2>
                     <input ref={name} className="nb-input mr-4" name="goalName" placeholder="Type your future..." />
                     <button onClick={toNext} className="nb-btn mt-4">Let's Go!</button>
